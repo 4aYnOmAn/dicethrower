@@ -2,19 +2,17 @@ from random import randint as rd; from time import sleep
 
 def dice():
     try:
-        fn = int(input(f'[How many dices?] (num) '))
+        fn = int(input(f'\n\n[How many dices?] (num) '))
         sn = int(input(f'[Which?] (num) d'))
     except ValueError:
-        print(f'[!]Not a number, try again.[!]')
-        dice()
+        return '[!]Not a number, try again.[!]'
     if fn == 1:
         print(f'*Threw the dice*')
         sleep(rd(1, 3))
         return f'[Result: {fn}d{sn} = {rd(1, sn)}]\n\n'
     else:
         if fn > 999 or sn > 999:
-            print(f'[!]To big number, try again, it must be < 1000[!]')
-            dice()
+            return '[!]To big number, try again, it must be < 1000[!]'
         else:
             nums = []
             result = 0
