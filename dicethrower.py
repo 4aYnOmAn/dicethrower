@@ -5,11 +5,11 @@ def dice():
         fn = int(input(f'[How many dices?] (num) '))
         sn = int(input(f'[Which?] (num) d'))
     except ValueError:
-        return '[!]Not a number, try again.[!]'
+        return '[!]Not a number, try again.[!]\n\n'
     if fn == 1:
         print(f'*Threw the dice*')
         sleep(rd(1, 3))
-        return f'[Result: {fn}d{sn} = {rd(1, sn)}]\n\n'
+        return f'[Result: {fn}d{sn} = {rd(1, sn)}]'
     else:
         if fn > 999 or sn > 999:
             return '[!]To big number, try again, it must be < 1000[!]\n\n'
