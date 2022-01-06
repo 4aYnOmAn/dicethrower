@@ -1,13 +1,13 @@
 from random import randint as rd
 from time import sleep as sl
-from subprocess import check_output as cho
+from subprocess import getoutput as gout
 
 
-clear = cho("clear").decode("utf-8")
+clear = gout("clear")
 
 
 def good_print(text):
-    return cho(["figlet", text]).decode("utf-8")
+    return gout("figlet '{text}'")
 
 
 def loadthing(time, times, sn, en):
