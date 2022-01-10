@@ -7,7 +7,7 @@ clear = gout("clear")
 
 
 def good_print(text):
-    return gout("figlet '{text}'")
+    return gout(f"figlet '{text}'")
 
 
 def loadthing(time, times, sn, en):
@@ -29,13 +29,13 @@ def dice():
         sn = int(input(f'[Which?] (num) d'))
     except ValueError:
         return '[!]Not a number, try again.[!]\n\n'
+    print(clear)
     if fn == 1:
         if sn <= 100:
             en = rd(1, sn)
             loadthing(10/sn*0.1, rd(1, sn), sn, en)
             return '[Results]:\n' + good_print(f'{fn}d{sn} = {en}\n\n')
         else:
-            print(clear)
             return '[Results]:\n' + good_print(f'{fn}d{sn} = {rd(1, sn)}\n\n')
     else:
         if fn > 999 or sn > 999:
