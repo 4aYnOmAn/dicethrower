@@ -1,5 +1,4 @@
 # dicethrower
-Requires:
-Python 3.x
-Figlet
-![изображение](https://user-images.githubusercontent.com/83335375/148763066-6a0e05a9-0336-4ad1-a060-c3fcb37e5748.png)
+Requires: Python 3.x, Figlet
+
+![diceroll](https://user-images.githubusercontent.com/83335375/170809367-caa4db8d-2040-43d7-aa71-349c431d0cd1.gif)
